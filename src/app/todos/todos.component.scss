@@ -21,3 +21,38 @@
   margin-top: -50px;
   background: #fff;
 }
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 30px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+
+  .check-box {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-right: 20px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    transition: background-color 0.2s;
+
+    i.material-icons {
+      font-size: 20px;
+      margin: 0 auto;
+      opacity: 0; // hide by default
+      transition: opacity 0.2s;
+    }
+  }
+}
+
+.todo-item:hover .check-box {
+  background: #eee;
+  i.material-icons {
+    opacity: 0.3;
+  }
+}
