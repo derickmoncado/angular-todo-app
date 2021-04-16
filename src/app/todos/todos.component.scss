@@ -61,6 +61,17 @@
         color: #fff;
       }
     }
+
+    &:hover {
+      .check-box {
+        background: rgb(11, 223, 170);
+
+        i.material-icons {
+          opacity: 1;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
