@@ -4,7 +4,7 @@ import { Todo } from './todo.model';
 @Injectable({
   providedIn: 'root',
 })
-export class DataServiceService {
+export class DataService {
   // Properties
   public todos: Todo[] = [
     { text: 'test data 1', completed: true },
@@ -12,6 +12,7 @@ export class DataServiceService {
     { text: 'test data 3', completed: true },
     { text: 'test data 4', completed: false },
     { text: 'test data 5', completed: false },
+    { text: 'test data 6', completed: true },
   ];
 
   constructor() {}
