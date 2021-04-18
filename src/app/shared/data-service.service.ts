@@ -12,7 +12,6 @@ export class DataService {
     { text: 'test data 3', completed: true },
     { text: 'test data 4', completed: false },
     { text: 'test data 5', completed: false },
-    { text: 'test data 6', completed: true },
   ];
 
   constructor() {}
