@@ -7,9 +7,9 @@ import { Todo } from './todo.model';
 export class DataService {
   // Properties
   public todos: Todo[] = [
-    { text: 'test data 1', completed: true },
-    { text: 'test data 2', completed: false },
-    { text: 'test data 3', completed: true },
+    { text: 'Take out trash', completed: true },
+    { text: 'Walk dog', completed: false },
+    { text: 'Make dinner', completed: true },
   ];
 
   constructor() {}
