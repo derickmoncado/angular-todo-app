@@ -17,9 +17,6 @@ export class TodosComponent implements OnInit {
 
   // Form submit
   onFormSubmit(form: NgForm): void {
-    console.log('Form Submitted!');
-    console.log(form);
-
     if (form.invalid) {
       this.showValidationErrors = true;
     } else {
