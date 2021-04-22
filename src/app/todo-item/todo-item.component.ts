@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../shared/todo.model';
 
 @Component({
@@ -11,6 +11,12 @@ export class TodoItemComponent implements OnInit {
 
   // Properties
   @Input() public todo: Todo | undefined;
+  @Output() todoClicked: EventEmitter<void> = new EventEmitter();
+
+  // Toggling the todo
+  onTodoClicked(): void {
+    this.todoClicked.emit();
+  }
 
   ngOnInit(): void {}
 }

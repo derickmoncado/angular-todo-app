@@ -26,6 +26,11 @@ export class TodosComponent implements OnInit {
     }
   }
 
+  // Sets todo to completed
+  toggleCompleted(todo: Todo): void {
+    todo.completed = !todo.completed;
+  }
+
   ngOnInit(): void {
     this.todos = this.dataService.getAllTodos();
   }

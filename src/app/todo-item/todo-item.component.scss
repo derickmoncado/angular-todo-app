@@ -16,7 +16,8 @@
     border-radius: 50%;
     height: 28px;
     width: 28px;
-    transition: background-color 0.3s;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
 
     i.material-icons {
       font-size: 20px;
