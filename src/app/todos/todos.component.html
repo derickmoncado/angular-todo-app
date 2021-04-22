@@ -12,6 +12,9 @@
         <p class="control is-expanded">
           <input
             ngModel
+            #todoTextField="ngModel"
+            required
+            minlength="2"
             name="text"
             class="input"
             type="text"
@@ -25,12 +28,14 @@
         </p>
       </div>
 
-      <!-- <p *ngIf="todoTextField.invalid" class="help is-danger">
-        Form is invalid. Please enter a Todo item!
-      </p>
-      <p *ngIf="todoTextField.invalid" class="help is-danger">
-        Todo item must contain atleast 2 characters
-      </p> -->
+      <div *ngIf="todoTextField.invalid && showValidationErrors">
+        <p *ngIf="todoTextField.errors.required" class="help is-danger">
+          Form is invalid - Please enter a Todo item!
+        </p>
+        <p *ngIf="todoTextField.errors.minlength" class="help is-danger">
+          Todo text must be at least 2 characters
+        </p>
+      </div>
     </form>
   </div>
 </div>

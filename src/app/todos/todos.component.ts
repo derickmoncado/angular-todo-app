@@ -16,10 +16,17 @@ export class TodosComponent implements OnInit {
   public showValidationErrors: boolean | undefined;
 
   // Form submit
-  onFormSubmit(form: NgForm) {
+  onFormSubmit(form: NgForm): void {
     console.log('Form Submitted!');
     console.log(form);
-    this.dataService.addTodo(new Todo(form.value.text));
+
+    if (form.invalid) {
+      this.showValidationErrors = true;
+    } else {
+      this.dataService.addTodo(new Todo(form.value.text));
+      this.showValidationErrors = false;
+      form.reset();
+    }
   }
 
   ngOnInit(): void {
