@@ -1,0 +1,103 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 30px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  position: relative;
+
+  .check-box {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-right: 20px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    transition: background-color 0.3s;
+
+    i.material-icons {
+      font-size: 20px;
+      margin: 0 auto;
+      opacity: 0; // hide by default
+      transition: opacity 0.3s;
+    }
+  }
+
+  &.completed {
+    color: #aaa;
+
+    .check-box {
+      background: rgb(11, 223, 170);
+      border-color: rgb(11, 223, 170);
+
+      i.material-icons {
+        opacity: 1;
+        color: #fff;
+      }
+    }
+
+    &:hover {
+      .check-box {
+        background: rgb(11, 223, 170);
+
+        i.material-icons {
+          opacity: 1;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .todo-controls-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+
+    // hidden by defualt
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+    .todo-control-button {
+      background: #eee;
+      padding: 7px 10px;
+      display: flex;
+
+      i.material-icons {
+        font-size: 20px;
+      }
+
+      &:hover {
+        color: #333;
+        background: #ccc;
+        transition: background 0.3s;
+      }
+
+      &:active {
+        background: #ddd;
+
+        &.is-danger {
+          &:active {
+            i.material-icons {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .todo-controls-box {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.5s;
+      transform: translateY(0);
+    }
+  }
+}
