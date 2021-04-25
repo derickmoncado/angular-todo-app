@@ -12,10 +12,16 @@ export class TodoItemComponent implements OnInit {
   // Properties
   @Input() public todo: Todo | undefined;
   @Output() todoClicked: EventEmitter<void> = new EventEmitter();
+  @Output() editClicked: EventEmitter<void> = new EventEmitter();
 
-  // Toggling the todo
+  // Emits click even up to parent component
   onTodoClicked(): void {
     this.todoClicked.emit();
+  }
+
+  // On Edit click
+  onEditClicked(): void {
+    this.editClicked.emit();
   }
 
   ngOnInit(): void {}

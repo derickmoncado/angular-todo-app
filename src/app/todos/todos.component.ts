@@ -26,9 +26,20 @@ export class TodosComponent implements OnInit {
     }
   }
 
-  // Sets todo to completed
+  // Toggles todo's completed value
   toggleCompleted(todo: Todo): void {
     todo.completed = !todo.completed;
+  }
+
+  // For editing a todo
+  editTodo(todo: Todo): void {
+    // ..we need
+    // - index of todo
+    // - user needs to enter new updated information
+
+    const index = this.todos.indexOf(todo);
+
+    // this.dataService.updateTodo();
   }
 
   ngOnInit(): void {

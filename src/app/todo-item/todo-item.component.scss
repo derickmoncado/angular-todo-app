@@ -3,7 +3,7 @@
   align-items: center;
   font-size: 18px;
   padding: 30px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e1e1e1;
   cursor: pointer;
   position: relative;
 
@@ -77,15 +77,23 @@
         color: #333;
         background: #ccc;
         transition: background 0.3s;
+
+        &.is-danger {
+          &:hover {
+            i.material-icons {
+              color: rgb(147, 46, 46);
+            }
+          }
+        }
       }
 
       &:active {
         background: #ddd;
 
         &.is-danger {
-          &:active {
+          &:hover {
             i.material-icons {
-              color: red;
+              color: rgb(228, 30, 30);
             }
           }
         }
