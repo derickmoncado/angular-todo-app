@@ -8,10 +8,22 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditTodoDiaglogComponent } from './edit-todo-diaglog/edit-todo-diaglog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent, TodosComponent, TodoItemComponent, EditTodoDiaglogComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    TodosComponent,
+    TodoItemComponent,
+    EditTodoDiaglogComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

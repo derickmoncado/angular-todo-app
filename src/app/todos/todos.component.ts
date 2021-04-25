@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../shared/todo.model';
 import { DataService } from '../shared/data-service.service';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { EditTodoDiaglogComponent } from '../edit-todo-diaglog/edit-todo-diaglog.component';
 
 @Component({
   selector: 'app-todos',
@@ -9,7 +11,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./todos.component.scss'],
 })
 export class TodosComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private dialog: MatDialog) {}
 
   // Properties
   public todos: Todo[] = [];
@@ -38,6 +40,11 @@ export class TodosComponent implements OnInit {
     // - user needs to enter new updated information
 
     const index = this.todos.indexOf(todo);
+
+    // Opens dialog
+    let dialogRef = this.dialog.open(EditTodoDiaglogComponent, {
+      width: '700px',
+    });
 
     // this.dataService.updateTodo();
   }
