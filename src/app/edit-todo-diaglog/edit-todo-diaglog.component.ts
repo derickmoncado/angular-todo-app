@@ -24,10 +24,12 @@ export class EditTodoDiaglogComponent implements OnInit {
     if (form.invalid) {
       return;
     }
+
     const updatedTodo = {
       ...this.todo,
       ...form.value,
     };
+
     this.dialogRef.close(updatedTodo);
   }
 

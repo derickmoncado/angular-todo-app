@@ -35,10 +35,6 @@ export class TodosComponent implements OnInit {
 
   // For editing a todo
   editTodo(todo: Todo): void {
-    // ..we need
-    // - index of todo
-    // - user needs to enter new updated information
-
     const index = this.todos.indexOf(todo);
 
     // Opens dialog
@@ -52,6 +48,12 @@ export class TodosComponent implements OnInit {
         this.dataService.updateTodo(index, result);
       }
     });
+  }
+
+  // Delete todo
+  deleteTodo(todo: Todo): void {
+    const index = this.todos.indexOf(todo);
+    this.dataService.deleteTodo(index);
   }
 
   ngOnInit(): void {
