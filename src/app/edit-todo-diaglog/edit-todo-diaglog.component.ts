@@ -21,6 +21,9 @@ export class EditTodoDiaglogComponent implements OnInit {
 
   // On form submit
   onFormSubmit(form: NgForm): void {
+    if (form.invalid) {
+      return;
+    }
     const updatedTodo = {
       ...this.todo,
       ...form.value,
