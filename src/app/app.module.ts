@@ -9,6 +9,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditTodoDiaglogComponent } from './edit-todo-diaglog/edit-todo-diaglog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ToolTipDirective } from './shared/tool-tip.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     TodosComponent,
     TodoItemComponent,
     EditTodoDiaglogComponent,
+    ToolTipDirective,
   ],
   imports: [
     BrowserModule,
