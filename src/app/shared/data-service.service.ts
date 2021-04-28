@@ -6,11 +6,7 @@ import { Todo } from './todo.model';
 })
 export class DataService {
   // Properties
-  public todos: Todo[] = [
-    { text: 'Take out trash', completed: true },
-    { text: 'Walk dog', completed: false },
-    { text: 'Make dinner', completed: true },
-  ];
+  public todos: Todo[] = [];
 
   constructor() {}
 
